@@ -207,7 +207,6 @@ static MouseShortcut mshortcuts[] = {
 
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod1Mask
-#define SHIFTMOD (Mod1Mask|ShiftMask)
 #define TERMMOD (ControlMask|ShiftMask)
 
 static Shortcut shortcuts[] = {
@@ -224,10 +223,10 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ Mod1Mask,             XK_k,           kscrollup,      {.i = +8} },
-	{ Mod1Mask,             XK_j,           kscrolldown,    {.i = +8} },
-	{ SHIFTMOD,             XK_K,           kscrollup,      {.i = -1} },
-	{ SHIFTMOD,             XK_J,           kscrolldown,    {.i = -1} },
+	{ ControlMask,          XK_k,           kscrollup,      {.i = +8} },
+	{ ControlMask,          XK_j,           kscrolldown,    {.i = +8} },
+	{ TERMMOD,              XK_K,           kscrollup,      {.i = -1} },
+	{ TERMMOD,              XK_J,           kscrolldown,    {.i = -1} },
 };
 
 /*
